@@ -801,15 +801,6 @@
         e.stopPropagation();
       });
 
-      this.$newElement.on('click', function () {
-        that.setSize();
-        if (!that.options.liveSearch && !that.multiple) {
-          setTimeout(function () {
-            that.$menu.find('.selected a').focus();
-          }, 10);
-        }
-      });
-
       this.$menu.on('click', 'li a', function (e) {
         var $this = $(this),
             clickedIndex = $this.parent().data('originalIndex'),
